@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#3983C0"
+	android:weightSum="4"
+	android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/call_blocker" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.8"
+        android:orientation="vertical"
+        android:weightSum="4" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal" 
+            android:padding="3dp"
+            android:weightSum="4"
+            android:layout_marginTop="10dp">
+<LinearLayout 
+    android:layout_height="match_parent"
+    android:layout_width="0dp"
+    android:layout_weight="3"
+    android:orientation="vertical">
+        <EditText
+        android:id="@+id/phoneno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Phone No"
+        android:textColor="#000000"
+        android:background="@drawable/edit_text"
+        android:padding="@dimen/padding_medium"
+         />
+
+        <Button
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_border"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFFFFF"
+        android:text="BLOCK" />
+        
+   </LinearLayout>
+   <LinearLayout 
+       android:layout_width="0dp"
+       android:layout_weight="1"
+       android:layout_height="match_parent">
+        <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:prompt="@string/block_title"
+        android:background="@drawable/edit_text"
+        android:entries="@array/block"
+         />
+       
+   </LinearLayout>
+        
+ </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:padding="3dp"
+            android:weightSum="2" >
+            
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true"
+       />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

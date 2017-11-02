@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3983C0"
+    android:orientation="vertical" >
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/a"
+    android:gravity="center"
+    android:background="#FFFFFF"
+    android:text="Developer"
+    android:textSize="30dp"
+    android:scaleType="fitCenter" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/a"
+    android:orientation="vertical"
+    android:paddingBottom="15dp" >
+
+<TextView
+    android:id="@+id/text_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:text="Rejaul Islam"
+    android:textColor="#FFFFFF"
+    android:layout_marginTop="15dp"
+    android:textSize="25dp" />
+<TextView
+    android:id="@+id/text_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:text="Student of Computer Science and\nEngineering(CSE)."
+    android:textColor="#FFFFFF"
+    android:layout_marginTop="15dp"
+    android:textSize="18dp" />
+<TextView
+    android:id="@+id/text_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:text="Chittagong University of Engineering and Technology(CUET)."
+    android:textColor="#FFFFFF"
+    android:layout_marginTop="10dp"
+    android:textSize="18dp" />
+<TextView
+    android:id="@+id/text_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:text="E-Mail:rejaul_cse12@yahoo.com "
+    android:textColor="#FFFFFF"
+    android:layout_marginTop="10dp"
+    android:textSize="18dp" />
+
+<Button
+    android:layout_width="80dp"
+    android:layout_height="40dp"
+    android:text="OK"
+    android:id="@+id/btn_yes"
+    android:layout_marginTop="15dp"
+    android:layout_gravity="center"
+    android:background="#FFFFFF"
+    android:textColor="#000000" />
+</LinearLayout>
+</LinearLayout>

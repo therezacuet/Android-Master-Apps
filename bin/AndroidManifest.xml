@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.thereza.androidmaster"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/splash"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.thereza.androidmaster.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thereza.androidmaster.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.thereza.androidmaster.EasyFileEncrypt"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thereza.androidmaster.FileDialog"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thereza.androidmaster.DownloadXML"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <receiver android:name="com.thereza.androidmaster.PhoneStateReceiver" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <!-- action android:name="android.intent.action.NEW_OUTGOING_CALL" / -->
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.thereza.androidmaster.AfterBootReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:label="AfterBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.thereza.androidmaster.CallFilterService"
+            android:enabled="true" />
+
+        <activity
+            android:name="com.thereza.androidmaster.Call_Block"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thereza.androidmaster.App_Manager"
+            android:label="@string/app_name" >
+             
+        </activity>
+        
+        <activity
+            android:name=".ApkInfo"
+            android:label="@string/title_activity_apk_list"
+            android:parentActivityName="com.abhi.applist.App_Manager">
+        </activity>
+        <activity
+            android:name=".WriteData"
+            android:label="@string/title_activity_apk_list" >
+        </activity>
+        <receiver android:name=".PackageReceiver" >
+            <intent-filter android:priority="999" >
+                <action android:name="android.intent.action.PACKAGE_INSTALL" />
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+         
+         
+    </application>
+
+</manifest>
